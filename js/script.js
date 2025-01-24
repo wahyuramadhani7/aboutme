@@ -38,9 +38,46 @@ document.addEventListener('DOMContentLoaded', () => {
       // Contact Form Handling
       contactForm.addEventListener('submit', (e) => {
           e.preventDefault();
-          alert('Terima kasih! Pesan Anda akan segera kami proses.');
-          contactForm.reset();
+          const nameInput = contactForm.querySelector('input[type="text"]');
+          const emailInput = contactForm.querySelector('input[type="email"]');
+          const messageInput = contactForm.querySelector('textarea');
+  
+          if (nameInput.value.trim() === '' || emailInput.value.trim() === '' || messageInput.value.trim() === '') {
+              alert('Mohon lengkapi semua field formulir kontak.');
+          } else {
+              alert('Terima kasih! Pesan Anda akan segera kami proses.');
+              contactForm.reset();
+          }
       });
+  
+      // Initialize AOS
+      AOS.init();
+  
+      // Initialize Swiper
+      const projectsSlider = new Swiper('.projects-slider', {
+          spaceBetween: 30,
+          pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+          },
+          navigation: {
+              nextEl: '.swiper-button-next',
+              prevEl: '.swiper-button-prev',
+          },
+      });
+  
+      // Typing Effect
+      const typingElement = document.querySelector('.typing-effect');
+      const text = typingElement.getAttribute('data-text');
+      let i = 0;
+      const typing = () => {
+          if (i < text.length) {
+              typingElement.innerHTML = text.substring(0, i + 1);
+              i++;
+              setTimeout(typing, 100);
+          }
+      };
+      typing();
   
       console.log('Website is ready with enhanced features!');
   });
