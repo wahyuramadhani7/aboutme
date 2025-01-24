@@ -90,6 +90,11 @@ experienceItems.forEach((item, index) => {
   item.dataset.aos = 'fade-up';
   item.dataset.aosDelay = index * 200;
 });
+AOS.init({
+      delay: 200,
+      duration: 600,
+      once: true
+    });
 });
       typing();
   
