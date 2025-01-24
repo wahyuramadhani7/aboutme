@@ -83,6 +83,13 @@ const educationItems = document.querySelectorAll('.timeline-item');
 educationItems.forEach((item, index) => {
   item.dataset.aos = 'fade-up';
   item.dataset.aosDelay = index * 100;
+  // Experience Fade-in Animation
+const experienceItems = document.querySelectorAll('.experience-item');
+
+experienceItems.forEach((item, index) => {
+  item.dataset.aos = 'fade-up';
+  item.dataset.aosDelay = index * 200;
+});
 });
       typing();
   

@@ -323,6 +323,54 @@
       font-size: 1.5rem;
       color: #ff4e50;
   }
+  /* Experience Section */
+.experience {
+      padding: 60px 20px;
+      background: white;
+    }
+    
+    .experience h2 {
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+      color: #ff4e50;
+      text-align: center;
+    }
+    
+    .experience-item {
+      display: flex;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+    
+    .experience-icon {
+      font-size: 2rem;
+      color: #00c9ff;
+    }
+    
+    .experience-content h3 {
+      font-size: 1.5rem;
+      margin-bottom: 5px;
+    }
+    
+    .experience-company {
+      font-weight: bold;
+      color: #ff4e50;
+    }
+    
+    .experience-date {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    
+    .experience-details {
+      margin-left: 20px;
+    }
+    
+    @media (max-width: 768px) {
+      .experience-item {
+        flex-direction: column;
+      }
+    }
   
   /* Projects Section */
   .projects {
