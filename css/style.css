@@ -343,8 +343,22 @@
       display: flex;
       gap: 20px;
       padding-bottom: 20px;
+      animation: scroll 20s linear infinite;
+    width: calc(300px * 7);
     }
-    
+    @keyframes scroll {
+      0% {
+          transform: translateX(0);
+      }
+      100% {
+          transform: translateX(-50%);
+      }
+  }
+  
+  .gallery-wrapper {
+      overflow: hidden;
+      width: 100%;
+  }
     .gallery-scroll img {
       width: 300px;
       height: auto;
@@ -356,6 +370,7 @@
     .gallery-scroll img:hover {
       transform: scale(1.05);
     }
+    
   /* Experience Section */
 .experience {
       padding: 60px 20px;
