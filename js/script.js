@@ -77,6 +77,14 @@ document.addEventListener('DOMContentLoaded', () => {
               setTimeout(typing, 100);
           }
       };
+      function showNotification(message) {
+            const notification = document.getElementById('notification');
+            notification.textContent = message;
+            notification.classList.add('show');
+            setTimeout(() => {
+              notification.classList.remove('show');
+            }, 5000);
+          }
       typing();
   
       console.log('Website is ready with enhanced features!');
