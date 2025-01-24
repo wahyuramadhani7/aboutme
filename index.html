@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wahyu's Personal Website</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1 class="glitch" data-text="Halo, Saya Wahyu!">Halo, Saya Wahyu!</h1>
+                <p>Selamat datang di perjalanan kehidupanku!</p>
+                <a href="#about" class="btn">Kenali Saya <i class="fas fa-arrow-down"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>Tentang Saya</h2>
+                <div class="profile">
+                    <div class="profile-image">
+                        <img src="images/profile.jpg" alt="Profil Saya">
+                        <div class="social-links">
+                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                    <div class="text">
+                        <p>Halo! Saya Wahyu, Saya berumur 20 tahun, saya merupakan mahasiswa dengan program studi Teknik Komputer di Universitas Diponegoro. Saya berasal dari Blora</p>
+                        <div class="skills">
+                            <h3>Keahlian Saya</h3>
+                            <div class="skill-list">
+                                <span class="skill-tag">Programming</span>
+                                <span class="skill-tag">Web Development</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hobbies" class="hobbies">
+            <div class="container">
+                <h2>Hobi Saya</h2>
+                <div class="hobbies-list">
+                    <div class="hobby-card" data-tooltip="Selalu mencari pengetahuan baru">
+                        <h3>📚 Membaca</h3>
+                        <p>Saya suka membaca buku tentang teknologi dan motivasi.</p>
+                    </div>
+                    <div class="hobby-card" data-tooltip="Meningkatkan strategi dan refleks">
+                        <h3>🎮 Bermain Game</h3>
+                        <p>Gaming adalah cara saya bersantai setelah bekerja.</p>
+                    </div>
+                    <div class="hobby-card" data-tooltip="Menjaga kesehatan dan kebugaran">
+                        <h3>⚽ Olahraga</h3>
+                        <p>Saya sangat menikmati bermain sepak bola dan olahraga lainnya untuk menjaga kesehatan.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Proyek Saya</h2>
+                <div class="projects-list">
+                    <div class="project-card">
+                        <h3>Web Portofolio</h3>
+                        <p>Proyek website pribadi menggunakan HTML, CSS, dan JavaScript</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">Demo</a>
+                            <a href="#" class="btn-small">Kode</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Aplikasi Mobile</h3>
+                        <p>Aplikasi manajemen tugas dengan React Native</p>
+                        <div class="project-links">
+                            <a href="#" class="btn-small">Demo</a>
+                            <a href="#" class="btn-small">Kode</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Wahyu. Dibuat dengan ❤️ dan semangat.</p>
+            <div class="contact-form">
+                <h3>Hubungi Saya</h3>
+                <form id="contactForm">
+                    <input type="text" placeholder="Nama" required>
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Pesan" required></textarea>
+                    <button type="submit" class="btn">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </footer>
+
+    <div class="cursor"></div>
+    <script src="js/script.js"></script>
+</body>
+</html>
