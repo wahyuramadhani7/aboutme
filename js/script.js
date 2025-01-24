@@ -77,6 +77,13 @@ document.addEventListener('DOMContentLoaded', () => {
               setTimeout(typing, 100);
           }
       };
+      // Education Timeline Animation
+const educationItems = document.querySelectorAll('.timeline-item');
+
+educationItems.forEach((item, index) => {
+  item.dataset.aos = 'fade-up';
+  item.dataset.aosDelay = index * 100;
+});
       typing();
   
       console.log('Website is ready with enhanced features!');
