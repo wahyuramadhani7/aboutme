@@ -96,6 +96,12 @@ AOS.init({
       once: true
     });
 });
+// Initialize AOS for the gallery section
+AOS.init({
+      delay: 200, 
+      duration: 800,
+      once: true,
+    });
       typing();
   
       console.log('Website is ready with enhanced features!');
