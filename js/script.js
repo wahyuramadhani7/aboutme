@@ -442,70 +442,206 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Add some elements to gallery for better UX
-    const galleryWrapper = document.querySelector('.gallery-wrapper');
-    if (galleryWrapper) {
-        // Add controls to pause/play the gallery
-        const galleryControls = document.createElement('div');
-        galleryControls.className = 'gallery-controls';
-        galleryControls.innerHTML = `
-            <button class="gallery-control pause">
-                <i class="fas fa-pause"></i>
-            </button>
-        `;
-        galleryControls.style.cssText = `
-            position: absolute;
-            bottom: 20px;
-            right: 20px;
-            z-index: 10;
-        `;
+// Gallery Animation Fix
+document.addEventListener('DOMContentLoaded', function() {
+    // Fix gallery animation
+    function fixGalleryAnimation() {
+        const galleryScroll = document.querySelector('.gallery-scroll');
+        if (!galleryScroll) return;
         
-        const pauseButton = galleryControls.querySelector('.pause');
-        pauseButton.style.cssText = `
-            background: rgba(255, 255, 255, 0.2);
-            border: none;
-            color: #4361ee;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            font-size: 1rem;
-            backdrop-filter: blur(5px);
-            transition: all 0.3s ease;
-        `;
-        
-        pauseButton.addEventListener('mouseenter', () => {
-            pauseButton.style.background = 'rgba(255, 255, 255, 0.3)';
-            pauseButton.style.transform = 'scale(1.1)';
+        // Clone gallery items for seamless infinite scroll
+        const galleryItems = galleryScroll.querySelectorAll('img');
+        galleryItems.forEach(item => {
+            const clone = item.cloneNode(true);
+            galleryScroll.appendChild(clone);
         });
         
-        pauseButton.addEventListener('mouseleave', () => {
-            pauseButton.style.background = 'rgba(255, 255, 255, 0.2)';
-            pauseButton.style.transform = 'scale(1)';
-        });
-        
-        let isGalleryPaused = false;
-        pauseButton.addEventListener('click', () => {
-            const galleryScroll = document.querySelector('.gallery-scroll');
-            if (isGalleryPaused) {
-                galleryScroll.style.animationPlayState = 'running';
-                pauseButton.innerHTML = '<i class="fas fa-pause"></i>';
-            } else {
-                galleryScroll.style.animationPlayState = 'paused';
-                pauseButton.innerHTML = '<i class="fas fa-play"></i>';
-            }
-            isGalleryPaused = !isGalleryPaused;
-        });
-        
-        const gallerySection = document.querySelector('.gallery');
-        if (gallerySection) {
-            gallerySection.style.position = 'relative';
-            gallerySection.appendChild(galleryControls);
+        // Add gallery controls
+        const galleryWrapper = document.querySelector('.gallery-wrapper');
+        if (galleryWrapper) {
+            const controls = document.createElement('div');
+            controls.className = 'gallery-controls';
+            
+            const pauseButton = document.createElement('button');
+            pauseButton.className = 'gallery-control pause';
+            pauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+            pauseButton.setAttribute('aria-label', 'Pause gallery');
+            
+            controls.appendChild(pauseButton);
+            galleryWrapper.appendChild(controls);
+            
+            // Pause/play functionality
+            let isPaused = false;
+            pauseButton.addEventListener('click', function() {
+                if (isPaused) {
+                    galleryScroll.style.animationPlayState = 'running';
+                    pauseButton.innerHTML = '<i class="fas fa-pause"></i>';
+                    pauseButton.setAttribute('aria-label', 'Pause gallery');
+                } else {
+                    galleryScroll.style.animationPlayState = 'paused';
+                    pauseButton.innerHTML = '<i class="fas fa-play"></i>';
+                    pauseButton.setAttribute('aria-label', 'Play gallery');
+                }
+                isPaused = !isPaused;
+            });
+            
+            // Reset animation on page resize to prevent glitches
+            window.addEventListener('resize', function() {
+                galleryScroll.style.animation = 'none';
+                setTimeout(function() {
+                    galleryScroll.style.animation = 'galleryScroll 40s linear infinite';
+                }, 10);
+            });
         }
     }
+    
+    // Improved mobile responsiveness
+    function improveResponsiveness() {
+        // Adjust timeline for mobile
+        const timeline = document.querySelector('.timeline');
+        if (timeline && window.innerWidth <= 992) {
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            timelineItems.forEach(item => {
+                item.style.width = '100%';
+                item.style.left = '0';
+            });
+        }
+        
+        // Disable hover effects on mobile
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            document.body.classList.add('touch-device');
+            
+            // Change cursor to auto
+            document.body.style.cursor = 'auto';
+            
+            // Hide custom cursor
+            const cursor = document.querySelector('.cursor');
+            if (cursor) cursor.style.display = 'none';
+        }
+    }
+    
+    // Fix swiper width for better mobile experience
+    function fixSwiperWidth() {
+        const projectsSlider = document.querySelector('.projects-slider');
+        if (!projectsSlider) return;
+        
+        if (window.innerWidth <= 768) {
+            projectsSlider.style.maxWidth = '90%';
+        }
+    }
+    
+    // Improve mobile navigation
+    function improveMobileNavigation() {
+        // Add a mobile menu button if it doesn't exist
+        if (!document.querySelector('.mobile-menu-btn') && window.innerWidth <= 768) {
+            const mobileMenuBtn = document.createElement('div');
+            mobileMenuBtn.className = 'mobile-menu-btn';
+            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            mobileMenuBtn.style.cssText = `
+                position: fixed;
+                top: 20px;
+                left: 20px;
+                width: 40px;
+                height: 40px;
+                background: var(--primary-color);
+                color: white;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                z-index: 999;
+                cursor: pointer;
+                font-size: 1.2rem;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            `;
+            
+            document.body.appendChild(mobileMenuBtn);
+        }
+    }
+    
+    // Initialize all fixes
+    fixGalleryAnimation();
+    improveResponsiveness();
+    fixSwiperWidth();
+    improveMobileNavigation();
+    
+    // Re-run on resize
+    window.addEventListener('resize', function() {
+        improveResponsiveness();
+        fixSwiperWidth();
+    });
+    
+    // Make sure AOS animations work better on mobile
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true,
+            disable: 'phone',
+            startEvent: 'DOMContentLoaded',
+        });
+    }
+    
+    // Fixed Swiper initialization for mobile compatibility
+    if (typeof Swiper !== 'undefined') {
+        const projectsSlider = new Swiper('.projects-slider', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            centeredSlides: true,
+            loop: true,
+            grabCursor: true,
+            autoHeight: true,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            },
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+        });
+    }
+    
+    // Add scroll to top button functionality
+    const scrollToTopBtn = document.createElement('div');
+    scrollToTopBtn.className = 'scroll-to-top';
+    scrollToTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
+    scrollToTopBtn.setAttribute('aria-label', 'Scroll to top');
+    document.body.appendChild(scrollToTopBtn);
+    
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollToTopBtn.classList.add('visible');
+        } else {
+            scrollToTopBtn.classList.remove('visible');
+        }
+    });
+    
+    scrollToTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    console.log("Mobile optimizations and gallery fixes have been applied!");
+});
     
     // Add scroll indicator to the header
     const scrollIndicator = document.createElement('div');
