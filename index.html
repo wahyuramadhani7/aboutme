@@ -5,17 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wahyu's Personal Website</title>
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
     <header>
+        <div class="header-background"></div>
         <div class="container">
             <div class="header-content">
                 <h1 class="glitch typing-effect" data-text="Halo, Saya Wahyu!">Halo, Saya Wahyu!</h1>
-                <p>Selamat datang di perjalanan kehidupanku!</p>
+                <p>Selamat datang di perjalanan digital saya sebagai <span class="highlight">Computer Engineer</span></p>
                 <a href="#about" class="btn">Kenali Saya <i class="fas fa-arrow-down"></i></a>
             </div>
         </div>
@@ -35,13 +36,16 @@
                         </div>
                     </div>
                     <div class="text" data-aos="fade-left">
-                        <p>Halo! Saya Wahyu Ramadhani, Teman Kuliah saya biasa manggil Wahyu tetapi teman lama saya biasa manggil Rama. Saya berumur 20 tahun, saya merupakan mahasiswa dengan program studi Teknik Komputer di Universitas Diponegoro. Saya Lahir di Bekasi, tetapi saya dari kecil tinggal di Blora, dan Rumah saya di Jepara</p>
+                        <p>Halo! Saya <span class="highlight">Wahyu Ramadhani</span>, teman kuliah saya biasa memanggil Wahyu tetapi teman lama saya biasa memanggil Rama. Saya berumur 20 tahun, mahasiswa Teknik Komputer di Universitas Diponegoro. Saya lahir di Bekasi, tetapi dari kecil tinggal di Blora, dan rumah saya di Jepara.</p>
+                        <p>Saya memiliki ketertarikan mendalam pada pengembangan web, teknologi komputasi, dan inovasi digital. Saya selalu berusaha untuk terus belajar dan mengembangkan keterampilan saya dalam bidang teknologi.</p>
                         <div class="skills">
                             <h3>Keahlian Saya</h3>
                             <div class="skill-list">
                                 <span class="skill-tag">Programming</span>
                                 <span class="skill-tag">Web Development</span>
                                 <span class="skill-tag">Leadership</span>
+                                <span class="skill-tag">UI/UX Design</span>
+                                <span class="skill-tag">Problem Solving</span>
                             </div>
                         </div>
                     </div>
@@ -54,16 +58,19 @@
                 <h2>Hobi Saya</h2>
                 <div class="hobbies-list">
                     <div class="hobby-card" data-tooltip="Selalu mencari pengetahuan baru" data-aos="flip-left">
+                        <i class="fas fa-book hobby-icon"></i>
                         <h3>📚 Membaca</h3>
-                        <p>Saya suka membaca buku tentang teknologi dan motivasi.</p>
+                        <p>Saya suka membaca buku tentang teknologi, pengembangan diri, dan inovasi digital untuk terus mengembangkan pengetahuan saya.</p>
                     </div>
                     <div class="hobby-card" data-tooltip="Meningkatkan strategi dan refleks" data-aos="flip-left" data-aos-delay="100">
+                        <i class="fas fa-gamepad hobby-icon"></i>
                         <h3>🎮 Bermain Game</h3>
-                        <p>Gaming adalah cara saya bersantai setelah bekerja.</p>
+                        <p>Gaming adalah cara saya bersantai setelah bekerja. Saya menikmati game strategi dan logika yang menantang kemampuan berpikir.</p>
                     </div>
                     <div class="hobby-card" data-tooltip="Menjaga kesehatan dan kebugaran" data-aos="flip-left" data-aos-delay="200">
+                        <i class="fas fa-futbol hobby-icon"></i>
                         <h3>⚽ Olahraga</h3>
-                        <p>Saya sangat menikmati bermain sepak bola dan olahraga lainnya untuk menjaga kesehatan.</p>
+                        <p>Saya sangat menikmati bermain sepak bola dan olahraga lainnya untuk menjaga keseimbangan antara aktivitas fisik dan mental.</p>
                     </div>
                 </div>
             </div>
@@ -76,8 +83,14 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="project-card">
+                                <div class="project-icon"><i class="fas fa-globe"></i></div>
                                 <h3>Web Portofolio</h3>
-                                <p>Proyek website pribadi menggunakan HTML, CSS, dan JavaScript</p>
+                                <p>Proyek website pribadi menggunakan HTML, CSS, dan JavaScript dengan fitur interaktif dan animasi modern.</p>
+                                <div class="tech-stack">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>JavaScript</span>
+                                </div>
                                 <div class="project-links">
                                     <a href="#" class="btn-small">Demo</a>
                                     <a href="#" class="btn-small">Kode</a>
@@ -86,159 +99,211 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="project-card">
+                                <div class="project-icon"><i class="fas fa-mobile-alt"></i></div>
                                 <h3>Aplikasi Mobile</h3>
-                                <p>Aplikasi manajemen tugas dengan React Native</p>
+                                <p>Aplikasi manajemen tugas dengan React Native, Firebase dan fitur notifikasi untuk meningkatkan produktivitas.</p>
+                                <div class="tech-stack">
+                                    <span>React Native</span>
+                                    <span>Firebase</span>
+                                    <span>Redux</span>
+                                </div>
                                 <div class="project-links">
                                     <a href="#" class="btn-small">Demo</a>
                                     <a href="#" class="btn-small">Kode</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Tambahkan slide proyek lainnya -->
+                        <div class="swiper-slide">
+                            <div class="project-card">
+                                <div class="project-icon"><i class="fas fa-robot"></i></div>
+                                <h3>IoT Smart Home</h3>
+                                <p>Sistem otomatisasi rumah menggunakan Arduino dan ESP8266 dengan kontrol melalui aplikasi Android.</p>
+                                <div class="tech-stack">
+                                    <span>Arduino</span>
+                                    <span>ESP8266</span>
+                                    <span>Android</span>
+                                </div>
+                                <div class="project-links">
+                                    <a href="#" class="btn-small">Demo</a>
+                                    <a href="#" class="btn-small">Kode</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="swiper-pagination"></div>
                     <div class="swiper-button-next"></div>
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
-            <section id="education" class="education" data-aos="fade-up">
-                  <div class="container">
-                    <h2>Pendidikan</h2>
-                    <div class="timeline">
-                      <div class="timeline-item" data-aos="fade-right">
+        </section>
+
+        <section id="education" class="education" data-aos="fade-up">
+            <div class="container">
+                <h2>Pendidikan</h2>
+                <div class="timeline">
+                    <div class="timeline-item" data-aos="fade-right">
                         <div class="timeline-icon">
-                          <i class="fas fa-graduation-cap"></i>
+                            <i class="fas fa-graduation-cap"></i>
                         </div>
                         <div class="timeline-content">
-                          <h3>SD Negeri 1 Blumbangrejo</h3>
-                          <p class="timeline-date">2010 - 2016</p>
-                          <p>Lulusan dengan predikat siswa teladan</p>
+                            <h3>SD Negeri 1 Blumbangrejo</h3>
+                            <p class="timeline-date">2010 - 2016</p>
+                            <p>Lulusan dengan predikat siswa teladan dan aktif dalam olimpiade sains.</p>
                         </div>
-                      </div>
-                      
-                      <div class="timeline-item" data-aos="fade-left">
-                        <div class="timeline-icon">
-                          <i class="fas fa-school"></i>
-                        </div>
-                        <div class="timeline-content right">
-                          <h3>MTS Muhammadiyah 3 Kunduran</h3>
-                          <p class="timeline-date">2016 - 2019</p>
-                          <p>Aktif dalam kegiatan ekstrakurikuler</p>
-                        </div>
-                      </div>
-                      
-                      <div class="timeline-item" data-aos="fade-right">
-                        <div class="timeline-icon">
-                          <i class="fas fa-university"></i>
-                        </div>
-                        <div class="timeline-content">
-                          <h3>SMA Negeri 1 Ngawem</h3>
-                          <p class="timeline-date">2019 - 2022</p>
-                          <p>Jurusan IPA</p>
-                        </div>
-                      </div>
-                      
-                      <div class="timeline-item" data-aos="fade-left">
-                        <div class="timeline-icon">
-                          <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="timeline-content right">
-                          <h3>Universitas Diponegoro</h3>
-                          <p class="timeline-date">2022 - Sekarang</p>
-                          <p>Program Studi Teknik Komputer</p>
-                        </div>
-                      </div>
                     </div>
-                  </div>
-                </section>
-                <section id="experience" class="experience" data-aos="fade-up">
-                  <div class="container">
-                    <h2>Pengalaman Kerja</h2>
-                    <div class="experience-item" data-aos="fade-up">
-                      <div class="experience-icon">
+                    
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>MTS Muhammadiyah 3 Kunduran</h3>
+                            <p class="timeline-date">2016 - 2019</p>
+                            <p>Aktif dalam kegiatan ekstrakurikuler dan menjabat sebagai ketua OSIS.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>SMA Negeri 1 Ngawem</h3>
+                            <p class="timeline-date">2019 - 2022</p>
+                            <p>Jurusan IPA dengan fokus pada mata pelajaran matematika dan fisika. Anggota aktif Paskibra dan Rohis.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item" data-aos="fade-left">
+                        <div class="timeline-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <div class="timeline-content right">
+                            <h3>Universitas Diponegoro</h3>
+                            <p class="timeline-date">2022 - Sekarang</p>
+                            <p>Program Studi Teknik Komputer dengan fokus pada pengembangan web dan sistem embedded.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience" data-aos="fade-up">
+            <div class="container">
+                <h2>Pengalaman Kerja</h2>
+                <div class="experience-item" data-aos="fade-up">
+                    <div class="experience-icon">
                         <i class="fas fa-code"></i>
-                      </div>
-                      <div class="experience-content">
+                    </div>
+                    <div class="experience-content">
                         <h3>Software Developer</h3>
                         <p class="experience-company">PT Sucofindo Cabang Semarang</p>
                         <p class="experience-date">Juli 2024 - September 2024</p>
                         <ul class="experience-details">
-                          <li>Mengembangkan aplikasi web menggunakan teknologi terkini</li>
-                          <li>Berkolaborasi dengan tim untuk merancang arsitektur sistem yang efisien</li>
-                          <li>Mengoptimalkan performa aplikasi dan memperbaiki bug</li>
+                            <li>Mengembangkan aplikasi web menggunakan React.js dan Node.js untuk sistem manajemen internal</li>
+                            <li>Berkolaborasi dengan tim untuk merancang arsitektur sistem yang efisien dan skalabel</li>
+                            <li>Mengoptimalkan performa aplikasi dan memperbaiki bug dengan menerapkan praktik clean code</li>
+                            <li>Memimpin implementasi fitur notifikasi real-time yang meningkatkan efisiensi operasional 30%</li>
                         </ul>
-                      </div>
                     </div>
-                  </div>
-                  <section id="organizations" class="organizations" data-aos="fade-up">
-                        <div class="container">
-                          <h2>Pengalaman Organisasi</h2>
-                          <div class="org-grid">
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>Olimpiade Sains Nasional</h3>
-                              <p>Peserta saat SD</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>OSIS SMP</h3>
-                              <p>Ketua OSIS</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>Olimpiade Sains Madrasah</h3>
-                              <p>Peserta saat MTS</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>Paskibra SMA</h3>
-                              <p>Anggota Pasukan Pengibar Bendera</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>Rohis SMA</h3>
-                              <p>Anggota Rohani Islam</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>Rohis Al-Muharrik UNDIP</h3>
-                              <p>Ketua Umum dan Hubungan Masyarakat</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>GDSC UNDIP</h3>
-                              <p>Hubungan Masyarakat</p> 
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>UKM Futsal Teknik Komputer UNDIP</h3>
-                              <p>Ketua</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>ORMADA</h3>
-                              <p>Minat dan Bakat</p>
-                            </div>
-                            <div class="org-item" data-aos="zoom-in">
-                              <h3>PKKMB FT UNDIP</h3>
-                              <p>Kaka Pendamping Mahasiswa Baru</p>
-                            </div>
-                          </div>
-                        </div>  
-                      </section>
-                      <section id="gallery" class="gallery">
-                        <div class="container">
-                          <h2>Gallery</h2>
-                          <div class="gallery-wrapper">
-                            <div class="gallery-scroll">
-                              <img src="images/foto1.jpg" alt="Gallery Image 1">
-                            <img src="images/foto2.jpg" alt="Gallery Image 2">
-                            <img src="images/foto3.jpg" alt="Gallery Image 3">
-                            <img src="images/foto4.jpg" alt="Gallery Image 4">
-                            <img src="images/foto5.jpg" alt="Gallery Image 5">
-                            <img src="images/foto6.jpg" alt="Gallery Image 6">
-                            <img src="images/foto7.jpg" alt="Gallery Image 7">
-                            </div>
-                          </div>
-                        </div>
-                      </section>
+                </div>
+                <div class="experience-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience-icon">
+                        <i class="fas fa-laptop"></i>
+                    </div>
+                    <div class="experience-content">
+                        <h3>Web Development Intern</h3>
+                        <p class="experience-company">Startup Lokal Semarang</p>
+                        <p class="experience-date">Januari 2024 - Maret 2024</p>
+                        <ul class="experience-details">
+                            <li>Membantu pengembangan website dengan teknologi modern (HTML5, CSS3, JavaScript)</li>
+                            <li>Membuat tampilan responsif untuk berbagai perangkat mobile dan desktop</li>
+                            <li>Berpartisipasi dalam code review dan proses quality assurance</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="organizations" class="organizations" data-aos="fade-up">
+            <div class="container">
+                <h2>Pengalaman Organisasi</h2>
+                <div class="org-grid">
+                    <div class="org-item" data-aos="zoom-in">
+                        <i class="fas fa-medal org-icon"></i>
+                        <h3>Olimpiade Sains Nasional</h3>
+                        <p>Peserta saat SD</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in">
+                        <i class="fas fa-users org-icon"></i>
+                        <h3>OSIS SMP</h3>
+                        <p>Ketua OSIS</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in">
+                        <i class="fas fa-atom org-icon"></i>
+                        <h3>Olimpiade Sains Madrasah</h3>
+                        <p>Peserta saat MTS</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in">
+                        <i class="fas fa-flag org-icon"></i>
+                        <h3>Paskibra SMA</h3>
+                        <p>Anggota Pasukan Pengibar Bendera</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in">
+                        <i class="fas fa-mosque org-icon"></i>
+                        <h3>Rohis SMA</h3>
+                        <p>Anggota Rohani Islam</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-mosque org-icon"></i>
+                        <h3>Rohis Al-Muharrik UNDIP</h3>
+                        <p>Ketua Umum dan Hubungan Masyarakat</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fab fa-google org-icon"></i>
+                        <h3>GDSC UNDIP</h3>
+                        <p>Hubungan Masyarakat</p> 
+                    </div>
+                    <div class="org-item" data-aos="zoom-in" data-aos-delay="100">
+                        <i class="fas fa-futbol org-icon"></i>
+                        <h3>UKM Futsal Teknik Komputer UNDIP</h3>
+                        <p>Ketua</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-graduation-cap org-icon"></i>
+                        <h3>ORMADA</h3>
+                        <p>Minat dan Bakat</p>
+                    </div>
+                    <div class="org-item" data-aos="zoom-in" data-aos-delay="200">
+                        <i class="fas fa-users-cog org-icon"></i>
+                        <h3>PKKMB FT UNDIP</h3>
+                        <p>Kaka Pendamping Mahasiswa Baru</p>
+                    </div>
+                </div>
+            </div>  
+        </section>
+        
+        <section id="gallery" class="gallery" data-aos="fade-up">
+            <div class="container">
+                <h2>Gallery</h2>
+                <div class="gallery-wrapper">
+                    <div class="gallery-scroll">
+                        <img src="images/foto1.jpg" alt="Gallery Image 1">
+                        <img src="images/foto2.jpg" alt="Gallery Image 2">
+                        <img src="images/foto3.jpg" alt="Gallery Image 3">
+                        <img src="images/foto4.jpg" alt="Gallery Image 4">
+                        <img src="images/foto5.jpg" alt="Gallery Image 5">
+                        <img src="images/foto6.jpg" alt="Gallery Image 6">
+                        <img src="images/foto7.jpg" alt="Gallery Image 7">
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Wahyu. Dibuat dengan ❤️ dan semangat.</p>
+            <p>&copy; 2025 Wahyu Ramadhani. Dibuat dengan ❤️ dan teknologi modern.</p>
             <div class="contact-form">
                 <h3>Hubungi Saya</h3>
                 <form id="contactForm">
@@ -248,10 +313,17 @@
                     <button type="submit" class="btn">Kirim Pesan</button>
                 </form>
             </div>
+            <div class="footer-links">
+                <a href="mailto:wahyu@example.com"><i class="fas fa-envelope"></i> wahyu@example.com</a>
+                <a href="tel:+6281234567890"><i class="fas fa-phone"></i> +62 812 3456 7890</a>
+                <a href="https://github.com/username"><i class="fab fa-github"></i> GitHub</a>
+                <a href="https://linkedin.com/in/username"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
         </div>
     </footer>
 
     <div class="cursor"></div>
+    
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/script.js"></script>
